@@ -8,6 +8,7 @@
   - [Amazon Corretto](#Amazon-Corretto)
   - [Oracle](#Oracle)
   - [Alibaba Dragonwell](#Alibaba-Dragonwell)
+  - [SapMachine](#SapMachine)
 - [Installing custom Java package type](#Installing-custom-Java-package-type)
 - [Installing custom Java architecture](#Installing-custom-Java-architecture)
 - [Installing custom Java distribution from local file](#Installing-Java-from-local-file)
@@ -141,6 +142,19 @@ steps:
     java-version: '8'
 - run: java -cp java HelloWorldApp
 ```
+
+### SapMachine
+**NOTE:** An OpenJDK release maintained and supported by SAP
+```yaml
+steps:
+- uses: actions/checkout@v4
+- uses: actions/setup-java@v4
+  with:
+    distribution: 'sapmachine'
+    java-version: '21'
+- run: java -cp java HelloWorldApp
+```
+
 
 ## Installing custom Java package type
 ```yaml
