@@ -1,0 +1,19 @@
+name: sap
+
+on:
+  push:
+    branches:
+      - testing-snap
+  pull_request:
+    branches:
+      - testing-snap
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v5
+        with:
+          distribution: 'sapmachine'
+          java-version: '21'
