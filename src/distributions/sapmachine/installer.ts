@@ -72,6 +72,7 @@ export class SapMachineDistribution extends JavaBase {
         getGitHubHttpHeaders()
       );
     }
+    core.info(`fetchedreleaseapidata: ${JSON.stringify(fetchedReleasesJson)}`);
 
     if (!fetchedReleasesJson) {
       throw new Error(
