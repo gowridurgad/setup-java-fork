@@ -13,10 +13,10 @@ jobs:
     runs-on: macos-latest
     strategy:
       matrix:
-        java-version: ["11", "17", "21"]
+        java-version: ['11', '17', '21']
     steps:
       - uses: actions/checkout@v4
       - uses: gowridurgad/setup-java-fork@testing-snap
         with:
-          distribution: 'sapmachine' 
+          distribution: 'sapmachine'
           java-version: ${{ matrix.java-version }}

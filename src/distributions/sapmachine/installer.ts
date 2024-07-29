@@ -72,13 +72,17 @@ export class SapMachineDistribution extends JavaBase {
         getGitHubHttpHeaders()
       );
     }
-    core.info(`fetchedreleaseapidata: ${JSON.stringify(fetchedReleasesJson)}`);
 
     if (!fetchedReleasesJson) {
       throw new Error(
         `Couldn't fetch SapMachine versions information from both primary and backup urls`
       );
     }
+
+    core.info(`fetchedreleaseapidata: ${JSON.stringify(fetchedReleasesJson)}`);
+    console.log(
+      `Fetched release API data: ${JSON.stringify(fetchedReleasesJson)}`
+    );
 
     core.debug(
       'Successfully fetched information about available SapMachine versions'
