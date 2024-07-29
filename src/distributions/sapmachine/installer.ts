@@ -73,6 +73,11 @@ export class SapMachineDistribution extends JavaBase {
       );
     }
 
+    core.info(`fetchedreleaseapidata: ${JSON.stringify(fetchedReleasesJson)}`);
+    console.log(
+      `Fetched release API data: ${JSON.stringify(fetchedReleasesJson)}`
+    );
+
     if (!fetchedReleasesJson) {
       throw new Error(
         `Couldn't fetch SapMachine versions information from both primary and backup urls`
