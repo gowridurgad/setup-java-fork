@@ -79,11 +79,6 @@ export class SapMachineDistribution extends JavaBase {
       );
     }
 
-    core.info(`fetchedreleaseapidata: ${JSON.stringify(fetchedReleasesJson)}`);
-    console.log(
-      `Fetched release API data: ${JSON.stringify(fetchedReleasesJson)}`
-    );
-
     core.debug(
       'Successfully fetched information about available SapMachine versions'
     );
