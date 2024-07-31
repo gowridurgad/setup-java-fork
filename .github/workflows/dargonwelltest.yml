@@ -1,0 +1,17 @@
+name: dargonwelltest
+
+on:
+  workflow_dispatch:
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        java-version: ['11']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: aparnajyothi-y/setup-java@main
+        with:
+          distribution: 'dragonwell'
+          java-version: ${{ matrix.java-version }}
